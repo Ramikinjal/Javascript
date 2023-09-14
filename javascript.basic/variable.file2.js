@@ -45,8 +45,8 @@ console.log(firstName);
 
 
 
- firstname = "rami";
-console.log(firstName);
+firstname = "rami";
+// console.log(firstName);
 // console.log(firstname);
 
 

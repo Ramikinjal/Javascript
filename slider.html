@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider-img img {
+            width: 60%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-img"><img src="../CSS/page/imges/1m.jpg" alt=""></div>
+        <div class="slider-img"><img src="../CSS/page/imges/12m.jpg" alt=""></div>
+        <div class="slider-img"><img src="../CSS/page/imges/15l.jpg" alt=""></div>
+        <div class="slider-img"><img src="../CSS/page/imges/16l.jpg" alt=""></div>
+    </div>
+    <button class="back" id="back">back</button>
+    <button class="back" id="forward">forward</button>
+    <script>
+        let sliderdata = document.getElementsByClassName("slider-img");
+        let counter = 0;
+        function slider(params) {
+            for (let index = 0; index < sliderdata.length; index++) {
+                // console.log("done");
+                sliderdata[index].style.display = "none"
+            }
+            sliderdata[counter].style.display = "block"
+            counter++;
+            if (counter >= sliderdata.length) {
+                counter = 0;
+            }
+
+        }
+        function back() {
+            for (let index = 2; index >= 0; index--) {
+                sliderdata[index].style.dispaly = "none";
+
+                console.log(sliderdata[index]);
+            }
+        }
+        document.getElementById("forward").addEventListener("click", function () {
+            setTimeout(slider);
+        })
+        // setInterval(slider, 3000);
+        document.getElementById("back").addEventListener("click", function () {
+            setTimeout(back);
+        })
+
+    </script>
+</body>
+</html>
