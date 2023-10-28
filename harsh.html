@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="disp" id="disp"></div>
+    <script>
+
+        function printPyramid(height) {
+            for (let i = 1; i <= height; i++) {
+                let spaces = ' '.repeat(height - i);
+                let stars = '*'.repeat(1 * i - 1);
+                console.log(spaces + stars);
+                document.write(spaces + stars)
+                document.write("<br>")
+            }
+        }
+
+        // Specify the height of the pyramid
+        const pyramidHeight = 5;
+
+        // Call the function to print the pyramid
+        printPyramid(pyramidHeight);
+
+
+
+
+
+
+
+
+
+
+        // function printStarPyramid(rows) {
+        //     for (let i = 1; i <= rows; i++) {
+        //         let pattern = '';
+        //         for (let j = 1; j <= rows - i; j++) {
+        //             pattern += ' '; // Add spaces for indentation
+        //         }
+        //         for (let k = 1; k <= 2 * i - 1; k++) {
+        //             pattern += '*'; // Add stars for the pyramid
+        //         }
+        //         document.write("&nbsp;" + pattern);
+        //         document.write("<br>")
+        //         console.log(pattern);
+        //     }
+        // }
+
+        // // Call the function with the number of rows you want in the pyramid
+        // printStarPyramid(5);
+    </script>
+</body>
+
+</html>

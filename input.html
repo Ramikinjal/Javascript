@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 20px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        span {
+            padding: 10px;
+            pointer-events: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: 1s;
+            transition-timing-function: ease-out;
+            /* transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); */
+            /* transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+            opacity: 0.5;
+        }
+
+        input {
+            padding: 10px;
+            /* text-align: center; */
+            margin: 0 auto;
+        }
+
+        input:focus+span,
+        input:not(:placeholder-shown)+span {
+            opacity: 2;
+            transform: scale(0.75) translateY(-100%) translateX(-30px);
+        }
+
+        /* label {
+            text-align: center;
+            margin: 0 auto;
+        } */
+
+        /* For IE Browsers*/
+        /* input:focus+span,
+        input:not(:-ms-input-placeholder)+span {
+            opacity: 1;
+            transform: scale(0.75) translateY(-100%) translateX(-30px);
+        } */
+        /* fieldset { */
+        /* display: inline-block */
+        /* display: none; */
+        /* } */
+
+        /* input:focus {
+            display: none
+        } */
+    </style>
+</head>
+<body>
+    <label>
+        <input placeholder=" ">
+        <span>Placeholder Text</span>
+    </label>
+    <div>
+        <input placeholder=" ">
+        <span>Placeholder Text</span>
+
+    </div>
+    <!-- <form action="">
+
+        <fieldset>
+            <legend>hello</legend>
+
+        </fieldset>
+        <input type="text" placeholder="hello">
+    </form> -->
+</body>
+</html>

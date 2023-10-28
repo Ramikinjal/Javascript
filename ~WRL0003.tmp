@@ -1,0 +1,157 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs40\lang9                Module 6) JAVASCRIPT BASIC & DOM\par
+\b0\f1\fs24\bullet  What is JavaScript?\par
+\f0\lang16393 -\f1\lang9 It's a versatile programming language primarily used for building interactive and dynamic content on websites. Originally created to make web pages more interactive, it's now a key component in web development.\par
+JavaScript allows you to add features like user authentication, form validation, and dynamic content updates without requiring the user to refresh the page. It's commonly used in conjunction with HTML and CSS to create modern, interactive web applications.\par
+\par
+\bullet  What is the use of isNaN function?\par
+\f0\lang16393 -\f1\lang9 The JavaScript isNaN() Function is used to check whether a given value is an illegal number or not. It returns true if the value is a NaN else returns false. It is different from the Number.isNaN() Method.\par
+\ul Parameter Values\ulnone : This method accepts a single parameter as mentioned above and described below: \par
+\f0\lang16393 .\ul\f1\lang9 value\ulnone : It is a required value passed in the isNaN() function.\par
+\ul Return Value\ulnone : It returns a Boolean value i.e. returns true if the value is NaN else returns false.\par
+\par
+\bullet  What is negative Infinity?\par
+The \b negative infinity \b0 in JavaScript is a constant value that is used to represent a value that is the lowest available. This means that no other number is lesser than this value. It can be generated using a self-made function or by an arithmetic operation.\par
+\b Note\b0 : JavaScript shows the NEGATIVE_INFINITY value as -Infinity.\par
+\b Negative infinity \b0 is different from mathematical infinity in the following ways:\f0\lang16393 -\par
+.Negative infinity results in -0(different from 0 ) when divided by any other number.\par
+.When divided by itself or positive infinity, negative infinity return NaN\par
+.Negative infinity, when divided by any positive number (apart from positive infinity) is negative infinity.\par
+.Negative infinity, divided by any negative number (apart from negative infinity) is positive infinity.\par
+.If we multiply negative infinity with NaN, we will get NaN as a result.\par
+.The product of 0 and negative infinity is Nan.\par
+.The product of two negative infinities is always a positive infinity.\par
+.The product of both positive and negative infinity is always negative infinity.\f1\lang9  \par
+\par
+\par
+\bullet  Which company developed JavaScript?\par
+\f0\lang16393 -\f1\lang9 JavaScript was developed by Netscape Communications Corporation.\par
+\f0\lang16393 -\f1\lang9 It was created by Brendan Eich in 1995 while he was working at Netscape. Initially named "Mocha," it was later renamed to "LiveScript," and finally, due to a partnership with Sun Microsystems, it was named JavaScript to leverage the popularity of Java at that time. Despite the name, JavaScript and Java are distinct and unrelated programming languages.\par
+\bullet  What are undeclared and undefined variables?\par
+\f0\lang16393 1.\b Undeclared Variable:-\par
+\b0 .An undeclared variable is a variable that has been used in the code without being declared using a var, let, or const keyword.\par
+.In some languages, this might lead to an error, while in others, the interpreter or compiler may create a global variable with that name.\par
+.Using undeclared variables can lead to unexpected behavior and is generally considered bad practice.\par
+\b Example:-\b0\par
+// Undeclared variable\par
+myVar = 10;\par
+// Later in the code, it's being used\par
+console.log(myVar); // Outputs 10\par
+2.\b Undefined Variable:-\par
+\b0 .An undefined variable is a variable that has been declared but has not been assigned a value.\par
+.In many programming languages, variables are initialized with a default value of `undefined` until a value is explicitly assigned.\par
+.Attempting to use or perform operations on an undefined variable may lead to errors or unexpected behavior.\par
+\b Example:-\par
+\b0 // Declared but not assigned\par
+let myVar;\par
+// Using an undefined variable\par
+console.log(myVar); // Outputs undefined\f1\lang9\par
+\bullet  Write the code for adding new elements dynamically?\par
+\f0\lang16393 -Javascript is a very important language when it comes to learning how the browser works. Often there are times we would like to add dynamic elements/content to our web pages. This post deals with all of that.\par
+\b Creation of new element\b0 : New elements can be created in JS by using the createElement() method.\par
+\b syntax:\b0   \par
+document.createElement("<tagName>");  \par
+// Where <tagName> can be any HTML \par
+// tagName like div, ul, button, etc.\par
+\par
+// newDiv element has been created\par
+For Eg: let newDiv = document.createElement("div");\f1\lang9\par
+\bullet  What is the difference between ViewState and SessionState?\par
+\b\f0\lang16393 1.\ul ViewState\ulnone :-\par
+.Scope:\b0 ViewState is used to store state information that is specific to a single web page.\par
+\b .Storage: \b0 The information stored in ViewState is maintained on the client side, usually in a hidden field. It's included in the page's HTML and sent back and forth between the client and the server with each request/response.\par
+\b .Lifetime: \b0 ViewState is short-lived and is only available during the lifespan of a single page. Once the user navigates away from the page, the ViewState is lost.\par
+\b .Usage: \b0 ViewState is often used to persist state information between postbacks (round-trips between the client and server) for a specific page. It helps in maintaining the state of controls on the page across postbacks.\par
+\b 2.\ul\f1\lang9 SessionState\ulnone\f0\lang16393 :-\par
+.Scope\b0 : SessionState is used to store state information that needs to be shared across multiple pages during a user's session.\par
+\b .Storage\b0 : The information stored in SessionState is maintained on the server. It can be stored in-memory, in a separate process, or in a database, depending on the configuration.\par
+\b .Lifetime\b0 : SessionState persists throughout the user's session, which starts when the user accesses the website and ends when they close the browser or their session times out.\par
+\b .Usage\b0 : SessionState is commonly used to store user-specific information, such as user preferences, authentication details, or shopping cart contents, across multiple pages.\f1\lang9\par
+\bullet  What is === operator?\par
+\f0\lang16393 -\f1\lang9 The === operator is a strict equality operator in JavaScript. It is used to compare two values for equality without performing type coercion. This means that not only the values being compared must be equal, but they must also be of the same data type.\par
+Here's how it works:\par
+If the operands are of the same type and have the same value, \f0\lang16393 `\f1\lang9 === \f0\lang16393 `\f1\lang9 returns \f0\lang16393 `\f1\lang9 true\f0\lang16393 `\f1\lang9 .\par
+If the operands are of different types or have different values, \f0\lang16393 `\f1\lang9 ===\f0\lang16393 `\f1\lang9  returns \f0\lang16393 `\f1\lang9 false\f0\lang16393 `\f1\lang9 .\par
+\ul\b\f0\lang16393 .Example:-\ulnone\b0\f1\lang9\par
+5 === 5    // true, because both operands are of the same type and have the same value\par
+5 === '5'  // false, because the operands are of different types (number and string)\par
+\bullet  How can the style/class of an element be changed?\par
+\ul\b\f0\lang16393 *Changed in style:-\par
+1.Direct Style Property Modification:\par
+\ulnone\b0\f1\lang9 // Get the element by its ID\par
+var myElement = document.getElementById('myElementId');\par
+\par
+// Change the background color directly\par
+myElement.style.backgroundColor = 'red';\par
+\ul\b\f0\lang16393 2.Using `setAttribute`:\ulnone\b0\f1\lang9\par
+// Get the element by its ID\par
+var myElement = document.getElementById('myElementId');\par
+\par
+// Set the style attribute directly\par
+myElement.setAttribute('style', 'background-color: blue; color: white;');\par
+\f0\lang16393 *\ul\b Changed in Class:-\par
+1.Direct Class Property Modification:\ulnone\b0\f1\lang9\par
+// Get the element by its ID\par
+var myElement = document.getElementById('myElementId');\par
+// Add a class\par
+myElement.className = 'newClass';\par
+// If you want to append a class without removing existing ones\par
+myElement.className += ' anotherClass';\par
+\ul\b\f0\lang16393 2.Using `classList` Property:\par
+\ulnone\b0\f1\lang9 // Get the element by its ID\par
+var myElement = document.getElementById('myElementId');\par
+\par
+// Add a class\par
+myElement.classList.add('newClass');\par
+\par
+// Remove a class\par
+myElement.classList.remove('oldClass');\par
+\par
+// Toggle a class (add if not present, remove if present)\par
+myElement.classList.toggle('toggleClass');\par
+\bullet  How to read and write a file using JavaScript?\par
+\f0\lang16393 -On the client side, you can\rquote t read or write files in JavaScript browsers. The fs module in Node.js may be used to accomplish this on the server-side. It has methods for reading and writing files on the file system that are both synchronous and asynchronous. Let\rquote s demonstrate some examples of reading and writing files with the node.js fs module.\par
+The fs.readFile() and rs.writeFile() methods are used to read and write of a file using javascript. The file is read using the fs.readFile() function, which is an inbuilt method. This technique reads the full file into memory and stores it in a buffer. \f1\lang9\par
+\bullet  What are all the looping structures in JavaScript?\par
+\f0\lang16393 -\f1\lang9 JavaScript supports several looping structures that allow you to execute a block of code repeatedly. The main looping structures in JavaScript are:\par
+\ul\b\f0\lang16393 1.For loop:-\par
+\ulnone\b0\f1\lang9 The \f0\lang16393 `\f1\lang9 for\f0\lang16393 `\f1\lang9  loop is a common loop that repeats a block of code a specified number of times.\par
+\f0\lang16393 -\f1\lang9 for (initialization; condition; iteration) \{\par
+  // code to be repeated\par
+\}\ul\b\par
+\f0\lang16393 2.While loop:-\ulnone\b0\f1\lang9\par
+The \f0\lang16393 `\f1\lang9 while\f0\lang16393 `\f1\lang9  loop repeats a block of code as long as a specified condition is true.\par
+\f0\lang16393 -while (condition) \{\par
+  // code to be repeated\par
+\}\par
+\ul\b 3.Do-While Loop:-\par
+\ulnone\b0 Similar to the `while` loop, but the block of code is executed at least once, even if the condition is initially false.\par
+-do \{\par
+  // code to be repeated\par
+\} while (condition);\par
+\ul\b 4.For...in loop:-\par
+\ulnone\b0 Iterates over the enumerable properties of an object, including inherited properties.\par
+-for (variable in object) \{\par
+  // code to be repeated\par
+\}\par
+\ul\b 5.For...of loop:-\par
+\ulnone\b0\f1\lang9 Introduced in ECMAScript 2015 (ES6), the \f0\lang16393 `\f1\lang9 for...of\f0\lang16393 `\f1\lang9  loop iterates over the values of an iterable object (arrays, strings, etc.).\par
+\f0\lang16393 -for (variable of iterable) \{\par
+  // code to be repeated\par
+\}\par
+\ul\b 6.forEach loop:-\par
+\ulnone\b0\f1\lang9 Available for arrays, the \f0\lang16393 `\f1\lang9 forEach\f0\lang16393 `\f1\lang9  method executes a provided function once for each array element.\par
+\f0\lang16393 -array.forEach(function(element) \{\par
+  // code to be repeated\par
+\});\f1\lang9\par
+\bullet  How can you convert the string of any base to an integer in JavaScript?\par
+\par
+\bullet  What is the function of the delete operator?\par
+\bullet  What are all the types of Pop up boxes available in JavaScript?\par
+\bullet  What is the use of Void (0)?\par
+\bullet  How can a page be forced to load another page in JavaScript?\par
+\bullet  What are the disadvantages of using innerHTML in JavaScript?\par
+\bullet  Create password field with show hide functionalities\b\f0\fs22\par
+}
+ 

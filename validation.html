@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <!-- <form action="" method="post">
         <input type="text" onblur="checkvalid()" required name="username" id="username">
         <span></span>
         <input type="submit" name="username" id="username">
@@ -26,8 +26,111 @@
                 console.log("done")
             }
 
-        }
+        } -->
 
-    </script>
+    <table align="center" border="6px solid">
+        <tr>
+            <td><label for="username">username</label></td>
+            <td><input type="text" id="username" onblur="uname(this)"></td>
+            <td><span id="usernameError"></span></td>
+        </tr>
+        <tr>
+            <td><label for="password">password</label></td>
+            <td><input type="text" id="password" onblur="P(this)"></td>
+            <td><span id="passwordError"></span></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="text" id="Email" onblur="email(this)"></td>
+            <td><span id="emailError"></span></td>
+        </tr>
+        <tr>
+            <td><label for="mobilenumber">mobilenumber</label></td>
+            <td><input type="text" name="" id="mobilenumber" onblur="mobilenumber(this)"></td>
+            <td><span id="mobilenumberError"></span></td>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="center">
+                <input type="submit" name="submit" id="submitButton">
+            </td>
+        </tr>
+
+        <script>
+            function uname(ku) {
+                var UnameEx = /^([a-zA-Z0-9]{5,14})+$/;
+                console.log(UnameEx.test(ku.value));
+
+                if (UnameEx.test(ku.value) == false) {
+                    document.getElementById("usernameError").innerText = "This username is invalid"
+                }
+                else {
+                    document.getElementById("usernameError").innerText = ""
+
+                }
+                if (ku.value == "") {
+                    document.getElementById("usernameError").innerText = "This field is reqired "
+                }
+
+            }
+            function P(kp) {
+                var PassEx = /^([a-zA-Z0-9_\.\-\@])+$/;
+                console.log(PassEx.test(kp.value));
+
+
+                if (PassEx.test(kp.value) == false) {
+                    document.getElementById("passwordError").innerText = "This password is invalid"
+                }
+                else {
+                    document.getElementById("passwordError").innerText = ""
+
+                }
+                if (kp.value == "") {
+                    document.getElementById("passwordError").innerText = "This field is reqired "
+                }
+            }
+
+
+            function email(ke) {
+                var emailEx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9_\.\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                console.log(emailEx.test(ke.value));
+
+
+                if (emailEx.test(ke.value) == false) {
+                    document.getElementById("emailError").innerText = "This email is invalid"
+                }
+                else {
+                    document.getElementById("emialError").innerText = ""
+
+                }
+                if (ke.value == "") {
+                    document.getElementById("emailError").innerText = "This field is reqired "
+                }
+            }
+
+
+            function mobilenumber(km) {
+                var mobilenumberEx = /^([0-9]{10})+ $/
+                console.log(mobilenumberEx.test(km.value));
+
+
+                if (mobilenumberEx.test(km.value) == false) {
+                    document.getElementById("mobilenumberError").innerText = "This mobilenumber is invalid"
+                }
+                else {
+                    document.getElementById("mobilenumberError").innerText = ""
+
+                }
+                if (km.value == "") {
+                    document.getElementById("mobilenumberError").innerText = "This field is reqired "
+                }
+            }
+
+
+
+
+        </script>
+    </table>
+
 </body>
 </html>

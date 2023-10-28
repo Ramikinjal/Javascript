@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Javascript/BASIC_JAVASCRIPT/Assets/css/style.css">
+
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Global & Local Variable</h1>
+
+            <div class="row">
+                <div class="col_50">
+                    <h4>Global variable</h4>
+                    <p>Global Variable in Javascript are declared outside of any function or block,making them
+                        accessible throughout the entire program. They have a global scope and can be accessed by any
+                        part of the code.</p>
+                </div>
+            </div>
+
+            <h4 class="text_center">this both example in script</h4>
+        </div>
+    </section>
+
+    <script>
+        // globalvariable
+        var globalVariable = "I am a global variable";
+
+        function myFunction() {
+            console.log("Accessing the global variable inside a function");
+            console.log(globalVariable); // Accessing the global variable inside a function
+
+        }
+        myFunction()
+
+        console.log(globalVariable); // Accessing the global variable outside the function
+
+        myFunction();
+        console.log(localVariable);//Error: localVariable is not defined(trying to access it outside the function)
+    </script>
+
+</body>
+</html>
