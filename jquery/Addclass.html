@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-css {
+            background-color: teal;
+            color: white;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <pre>
+        Instead of .click( handler ) or .click( eventData, handler ), use .on( "click", handler ) or .on( "click", eventData, handler ), respectively.
+
+        Instead of .click(), use .trigger( "click" ).
+    </pre>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste rem nesciunt ipsa laborum, perferendis
+        eum eos quos laudantium aut at rerum cumque dolorem explicabo omnis quia? Exercitationem incidunt dignissimos
+        quaerat.</p>
+    <button id="btn-click">Click</button>
+    <button id="remove-class-btn">Remove Class</button>
+    <button id="toggle-class-btn">toggle Class</button>\
+
+    <script>
+        $("#btn-click").on("click", function () {
+            $("#para").addClass("custom-css")
+        })
+        $("#remove-class-btn").on("click", function () {
+            $("#para").removeClass("custom-css")
+        })
+        $("#toggle-class-btn").on("click", function () {
+            $("#para").toggleClass("custom-css")
+        })
+    </script>
+
+
+</body>
+</html>
