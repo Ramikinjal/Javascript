@@ -49,16 +49,15 @@
                 <td><input type="submit" value="add" onclick="addName()" /></td>
             </tr>
 
-            <tr>
+            <tr id="inputcontainer">
                 <td>
-                    <ol>
-                        <li id="a"></li>
-                        <li id="b"></li>
-                        <li id="c"></li>
-                    </ol>
+
+                    <li id="a"></li>
+                    <li id="b"></li>
+                    <li id="c"></li>
+
                 </td>
             </tr>
-
 
         </table>
 
@@ -88,7 +87,19 @@
             let surname = document.getElementById("surname").value;
             ghi.push(surname);
             document.getElementById("c").innerHTML = ghi;
-        }
+
+            const taskItem = document.createElement("td");
+            taskItem.className = "task-item";
+
+            const taskText = document.createElement("li");
+            taskText.textContent = taskInput.value;
+
+            taskItem.appendChild(taskText);
+            taskList.appendChild(taskItem);
+
+            // Clear input field after adding task
+            taskInput.value = "";
+
     </script>
 </body>
 </html>
