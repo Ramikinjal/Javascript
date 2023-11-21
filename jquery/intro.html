@@ -6,7 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and
+
+
+    <noscript>please turn on js from ur browsers</noscript>
+    <div class="div" id="div"></div>
+
+    <footer>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            document.getElementById("div").innerHTML = "test"
+            $("#div").html("test")
+        </script>
+    </footer>
+
+
+
+    <!-- <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and
         manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a
         multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that
         millions of people write JavaScript.</p>
@@ -19,13 +34,7 @@
 
 
     <script>
-        // function getdata() {
-        //     console.log("called");
-        //     let inpData = document.getElementById("data").value;
-        //     console.log(inpData);
-        //     let inpDataByjQ = $("#data").val();
-        //     console.log(inpDataByjQ);
-        // }
+       
         function getdata() {
             console.log("called");
             let inpData = document.getElementById("data").value;
@@ -33,6 +42,6 @@
             let inpDataByjQ = $("#data").val();
             console.log(inpDataByjQ);
         }
-    </script>
+    </script> -->
 </body>
 </html>

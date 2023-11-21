@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <style>
         .custom-css {
             background-color: teal;
             color: white;
         }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    </style> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <style>
+        .box {
+            line-height: 100px;
+            background-color: teal;
+            color: white;
+        }
+
+        .disp-none {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <pre>
+    <!-- <pre>
         Instead of .click( handler ) or .click( eventData, handler ), use .on( "click", handler ) or .on( "click", eventData, handler ), respectively.
 
         Instead of .click(), use .trigger( "click" ).
@@ -37,7 +50,58 @@
         $("#toggle-class-btn").on("click", function () {
             $("#para").toggleClass("custom-css")
         })
+    </script> -->
+
+    <button id="btnjqadd">Click add jQuery</button>
+    <button id="btnjqremove">Click remove jQuery</button>
+    <button id="btnjqtoggle">Click toggle jQuery</button>
+    <button id="btnjs">Click JavaScript Add Class</button>
+    <button id="btnjsremove">Click JavaScript Remove Class</button>
+    <button id="btnjstoggle">Click JavaScript Toggle Class</button>
+
+
+    <div class="box" id="box">
+        <h2>Menu</h2>
+    </div>
+
+
+    <script>
+        document.getElementById("btnjs").addEventListener("click", function () {
+            document.getElementById("box").classList.add("disp-none")
+        })
+
+        document.getElementById("btnjsremove").addEventListener("click", function () {
+            document.getElementById("box").classList.remove("disp-none")
+        })
+        document.getElementById("btnjstoggle").addEventListener("click", function () {
+            // console.log("js called");
+            let ClassList = document.getElementById("box").classList
+            console.log(ClassList.length);
+            if (ClassList.length > 1) {
+                document.getElementById("box").classList.remove("disp-none")
+            } else {
+                document.getElementById("box").classList.add("disp-none")
+            }
+        })
+
+        //JQuery
+        $("#btnjqadd").on("click", function () {
+            // console.log("jQuery called");
+            // $("#box").addClass("disp-none")
+        })
+        $("#btnjqremove").on("click", function () {
+            $("#box").removeClass("disp-none")
+            // console.log("jQuery called");
+        })
+        $("#btnjqtoggle").on("click", function () {
+            $("#box").toggleClass("disp-none")
+            // console.log("jQuery called");
+        })
     </script>
+
+
+
+
 
 
 </body>
