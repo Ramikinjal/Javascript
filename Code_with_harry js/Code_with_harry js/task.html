@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ---------- Factorial Number ----------
+
+  //   let number = prompt("Enter a positive number");
+  //   number = Number.parseInt(number);
+
+  //   if (number < 0) {
+  //     console.log("Error ! Factorial for negative does not exist");
+  //   } else if (number === 0) {
+  //     console.log(`The Factorial of ${number} is 1`);
+  //   } else {
+  //     let fact = 1;
+  //     for (let i = 1; i <= number; i++) {
+  //       fact = fact * i;
+  //     }
+  //     console.log(fact);
+  //   }
+
+  // ---------- Fibonacci Series ----------
+
+  //   let number = prompt("Enter the number");
+  //   number = Number.parseInt(number);
+  //   let n1 = 0,
+  //     n2 = 1,
+  //     nextTerm;
+
+  //   for (let i = 1; i <= number; i++) {
+  //     console.log(n1); // 0 1 1 2 3 5
+  //     nextTerm = n1 + n2; //1 2 3 5 8
+  //     n1 = n2; //1 1 2 3 5
+  //     n2 = nextTerm; //1 2 3 5 8
+  //   }
+
+  // ---------- Prime Number ----------
+
+  // let number = prompt("Enter a positive number: ");
+  // number = Number.parseInt(number);
+  // let isPrime = true;
+
+  // if (number === 1) {
+  //   console.log("1 is neither prime nor composite number.");
+  // } else if (number > 1) {
+  //   // looping through 2 to number-1
+  //   for (let i = 2; i < number; i++) {
+  //     if (number % i == 0) {
+  //       isPrime = false;
+  //       break;
+  //     }
+  //   }
+
+  //   if (isPrime) {
+  //     console.log(`${number} is a prime number`);
+  //   } else {
+  //     console.log(`${number} is a not prime number`);
+  //   }
+  // }
+
+  // // check if number is less than 1
+  // else {
+  //   console.log("The number is not a prime number.");
+  // }
+
+  // ---------- Odd even number ----------
+
+  // let number = prompt("Enter a number");
+  // number = Number.parseInt(number);
+
+  // if (number % 2 == 0) {
+  //   console.log("The number is even.");
+  // } else {
+  //   console.log("The number is odd.");
+  // }
+
+  // ---------- Pattern for triangle ----------
+
+  // for (let row = 1; row <= 5; row++) {
+  //   for (let col = 1; col < row; col++) {
+  //     document.write("&nbsp&nbsp");
+  //   }
+
+  //   for (let col = row; col <= 5; col++) {
+  //     document.write("*");
+  //   }
+  //   document.write("<br>");
+  // }
+
+  // for (let row = 5; row >= 1; row--) {
+  //   for (let col = 1; col < row; col++) {
+  //     document.write("&nbsp&nbsp");
+  //   }
+
+  //   for (let col = row; col <= 5; col++) {
+  //     document.write("*");
+  //   }
+  //   document.write("<br>");
+  // }
+
+  // ---------- Reversing strings ----------
+
+  // function reverseString(str) {
+  //   // empty string
+  //   let newString = "";
+  //   for (let i = str.length - 1; i >= 0; i--) {
+  //     newString += str[i];
+  //   }
+  //   return newString;
+  // }
+
+  // // take input from the user
+  // const string = prompt("Enter a string: ");
+
+  // const result = reverseString(string);
+  // console.log(result);
+
+  // ---------- Armstrong number ----------
+
+  // const number = prompt("Enter a positive integer");
+  // const numberOfDigits = number.length;
+  // let sum = 0;
+
+  // // create a temporary variable
+  // let temp = number;
+
+  // while (temp > 0) {
+  //   let remainder = temp % 10;
+  //   sum += remainder ** numberOfDigits;
+
+  //   // removing last digit from the number
+  //   temp = parseInt(temp / 10); // convert float into integer
+  //   console.log(temp);
+  // }
+
+  // if (sum == number) {
+  //   console.log(`${number} is an Armstrong number`);
+  // } else {
+  //   console.log(`${number} is not an Armstrong number.`);
+  // }
+
+  // ---------- Integer palindrome ----------
+
+  // let number = prompt("Enter a number");
+  // number = Number.parseInt(number);
+
+  // var remainder,
+  //   temp,
+  //   reversedNumber = 0;
+  // temp = number;
+
+  // // our reverse logic for numbers
+  // while (number > 0) {
+  //   remainder = number % 10;
+  //   number = parseInt(number / 10);
+  //   reversedNumber = reversedNumber * 10 + remainder;
+  // }
+  // //check whether the number is palindrome
+  // if (reversedNumber == temp) {
+  //   console.log("The given number is Palindrome");
+  // } else {
+  //   console.log("The given number is not palindrome");
+  // }
+
+  // jenish = 3;
+  // console.log(jenish);
+  // let jenish;
+
+  // let x = 2;
+  // let y = "2";
+
+  // console.log(x == y);
+  // console.log(x === y);
+
+  // var x = 220;
+  // var y = "hello";
+  // var z = undefined;
+
+  // console.log(x || y);
+  // console.log(x || z);
+  // console.log(x && y);
+  // console.log(y && z);
+  // console.log(null && undefined);
+  // console.log(null || undefined);
+
+  const obj = {
+    name: "jenish",
+    password: 1234,
+  };
+
+  obj.keyname = function () {
+    alert("hello");
+  };
+  obj.keyname();
+  console.log(obj);
+</script>
