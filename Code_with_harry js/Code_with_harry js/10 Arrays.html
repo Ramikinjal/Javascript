@@ -13,33 +13,33 @@
 
   // arrays : arays are variable which can hold more than one value.
   let marks_12 = [91, 25, 63, false, "not presant",];
-  // marks_12[5] = 89; //adding a new value to the array
-  // marks_12[0] = 99; //value can be change //note : "number" now become [99, 25, 63, false, "not presant", 89]
-  // // arrays are mutable arrays can be changed.
-  // console.log(marks_12);
-  // console.log(marks_12[1]); //25
-  // console.log(marks_12[2]); //value get using index //63
-  // console.log(marks_12.length); // 6
+  marks_12[5] = 89; //adding a new value to the array
+  marks_12[0] = 99; //value can be change //note : "number" now become [99, 25, 63, false, "not presant", 89]
+  // arrays are mutable arrays can be changed.
+  console.log(marks_12);
+  console.log(marks_12[1]); //25
+  console.log(marks_12[2]); //value get using index //63
+  console.log(marks_12.length); // 6
 
   //   =========arrays methods==========
 
   let num = [1, 2, 5, 7, 52];
-  // console.log(typeof num); //object
+  console.log(typeof num); //object
 
   //   1) toString method : The toString() method returns a string representing the object.
-  // console.log(num);
-  // let b = num.toString(); //b is now a string
-  // console.log(b); //1,2,5,7,52
-  // console.log(typeof b); //string
+  console.log(num);
+  let b = num.toString(); //b is now a string
+  console.log(b); //1,2,5,7,52
+  console.log(typeof b); //string
 
   // 2) join method: join all the array elements using a seprator.
-  // let c = num.join("-");
-  // console.log(c, typeof c); //1-2-5-7-52, string
+  let c = num.join("-");
+  console.log(c, typeof c); //1-2-5-7-52, string
 
   //   3) pop method : remove last element from the arays.
   //   note : this method update the orignal array return the popped value.
-  // let r = num.pop(); //pop return the popped element
-  // console.log(num, r); // [1, 2, 5, 7] , 52
+  let r = num.pop(); //pop return the popped element
+  console.log(num, r); // [1, 2, 5, 7] , 52
 
   //   4) push method :adds a new element at the end of the array.
   //   note: modified the original array and return the new array length.

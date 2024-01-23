@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Nunito", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #206b4f;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify {
+    justify-content: space-between;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.ma_l_a {
+    margin-left: auto;
+}
+
+header {
+    position: static;
+    /* left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999; */
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+header.headeractive {
+    position: fixed;
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(160deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+html {
+    font-size: 80%;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    margin: 13px 0;
+}
+
+.header_text {
+    margin: 0 50px;
+    /* padding: 0 50px; */
+    position: static;
+    padding: 10px 0;
+    background: none;
+    transition: none;
+}
+
+
+.header_text ul li a {
+    color: #777;
+    display: inline-block;
+}
+
+.header_text ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #00754a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    margin-top: 4px;
+}
+
+.header_text ul li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 1rem;
+    width: auto;
+    margin: 0;
+}
+
+.header_text ul li a:hover::after {
+    width: 100%;
+}
+
+.header_text ul li a:hover {
+    color: #000;
+}
+
+.header_text_active {
+    padding-bottom: 2px;
+    border-bottom: 4px solid orange;
+}
+
+.surch {
+    margin: 20px 70px;
+}
+
+.search-input {
+    position: relative;
+    width: 300px;
+}
+
+.input__text_field {
+    outline-color: #999;
+    width: 100%;
+    text-indent: 33px;
+    padding: 10px 20px;
+    border-radius: 1.25rem;
+    border: none;
+    box-shadow: 0 0 2px #00000012, 0 2px 2px #0000000f, 0 1px 3px #0000001a;
+}
+
+.input__icon {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+::placeholder {
+    color: #999;
+}
+
+.icon2 i {
+    padding: 23px 7px;
+    font-size: 30px;
+    color: #000;
+}
+
+.icon2 i {
+    padding: 23px 7px;
+    font-size: 30px;
+    color: #000;
+}
+
+.bar {
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #0e382c;
+}

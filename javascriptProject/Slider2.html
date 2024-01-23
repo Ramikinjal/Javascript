@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .wrapper {
+            display: flex;
+            transition: transform 1s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper" id="wrap">
+        <img class="slide_item" src="https://picsum.photos/id/237/1000/500" alt="">
+        <img class="slide_item" src="https://picsum.photos/seed/picsum/1000/500" alt="">
+        <img class="slide_item" src="https://picsum.photos/1000/500?grayscale" alt="">
+    </div>
+
+
+    <script>
+
+        let sliderdata = document.getElementsByClassName('slide_item')
+        console.log(sliderdata);
+
+
+        let count = 0;
+
+        function slider() {
+
+            for (let index = 0; index < sliderdata.length; index++) {
+                console.log(sliderdata[index]);
+                sliderdata[index].style.display = "none";
+
+            }
+
+            if (count >= sliderdata.length) {
+                count = 0;
+            }
+            // console.log(count);
+            sliderdata[count].style.display = "block";
+            count++
+            setTimeout(slider, 3000)
+        }
+        slider()
+
+    </script>
+
+
+
+</body>
+
+</html>
